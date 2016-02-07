@@ -45,3 +45,45 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'administrate'
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'devise_invitable'
+gem 'figaro'
+gem 'high_voltage'
+gem 'mysql2', '~> 0.3.18'
+gem 'pundit'
+gem 'simple_form'
+gem 'slim-rails'
+
+group :development do
+  gem 'better_errors'
+  gem 'haml2slim'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_apps_pages'
+  gem 'rails_apps_testing'
+  gem 'rails_layout'
+  gem 'spring-commands-rspec'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'rubocop'
+end
+
+group :production do
+  gem 'puma'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
+
