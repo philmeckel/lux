@@ -1,0 +1,12 @@
+= simple_form_for(@agent) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :company    
+    = f.input :url
+    = f.input :img_url
+    = f.input :click_count
+
+  .form-actions
+    = f.button :submit

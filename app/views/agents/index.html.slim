@@ -1,0 +1,29 @@
+h1 Listing agents
+
+table
+  thead
+    tr
+      th Name
+      th Company
+      th Url
+      th Img url
+      th Click count
+      th
+      th
+      th
+
+  tbody
+    - @agents.each do |agent|
+      tr
+        td = agent.name
+        td = agent.company
+        td = agent.url
+        td = agent.img_url
+        td = agent.click_count
+        td = link_to 'Show', agent
+        td = link_to 'Edit', edit_agent_path(agent)
+        td = link_to 'Destroy', agent, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Agent', new_agent_path

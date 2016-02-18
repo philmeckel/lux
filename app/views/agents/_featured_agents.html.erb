@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="page-header">Featured Agents</h2>
+  </div>
+  <% Agent.all.each do |agent| %>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <img class="img-responsive customer-img"  width="100" height="100" src=<%=agent.img_url%> alt="">
+      <%=link_to agent.name, agent.url %>
+      <small><%=link_to agent.company, agent.url %></small>
+    </div>
+  <% end %>
+</div>

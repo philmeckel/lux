@@ -16,7 +16,7 @@ body {
 }
 
 .img-portfolio {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .img-hover:hover {
@@ -91,3 +91,4 @@ footer {
         height: 70%;
     }
 }
+

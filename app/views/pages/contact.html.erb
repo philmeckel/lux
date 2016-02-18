@@ -4,12 +4,9 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Contact
-                <small>Subheading</small>
-            </h1>
+            <br><br>
             <ol class="breadcrumb">
-                <li><%= link_to 'Home', root_path %>
-                </li>
+                <li><%= link_to 'Home', root_path %></li>
                 <li class="active">Contact</li>
             </ol>
         </div>
@@ -20,76 +17,31 @@
     <div class="row">
         <!-- Map Column -->
         <div class="col-md-8">
-            <!-- Embedded Google Map -->
-            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+          <div style="width:100%;overflow:hidden;height:400px;max-width:100%;">
+              <div id="embedded-map-canvas" style="height:100%; width:100%;max-width:100%;">
+                  <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=2202+Boston+Street,+Baltimore,+MD,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                  </div><a class="google-map-enabler" href="https://www.bootstrapskins.com/" id="get-data-for-map">premium bootstrap themes</a><style>#embedded-map-canvas .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.bootstrapskins.com/google-maps-authorization.js?id=4fbc6147-2fa8-e82a-1cc4-1f4463f48ddb&c=google-map-enabler&u=1455561076" defer="defer" async="async"></script>
         </div>
         <!-- Contact Details Column -->
         <div class="col-md-4">
-            <h3>Contact Details</h3>
+            <h3>LUX Real Estate Title</h3>
             <p>
-                3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                2202 Boston St<br>Suite 200<br>Baltimore, MD 21231<br>
             </p>
             <p><i class="fa fa-phone"></i>
-                <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <abbr title="Phone">P</abbr>: (443) 835-4931</p>
             <p><i class="fa fa-envelope-o"></i>
-                <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                <abbr title="Email">E</abbr>: <a href="mailto:admin@luxretitle.com">admin@luxretitle.com</a>
             </p>
             <p><i class="fa fa-clock-o"></i>
-                <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 6:00 PM</p>
             <ul class="list-unstyled list-inline list-social-icons">
-                <li>
-                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                </li>
+                <li><a href="https://www.facebook.com/LUX-Real-Estate-Title-1563980610529156/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
         </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Contact Form -->
-    <div class="row">
-        <div class="col-md-8">
-            <h3>Send us a Message</h3>
-            <form name="sentMessage" id="contactForm" novalidate>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Full Name:</label>
-                        <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                        <p class="help-block"></p>
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Phone Number:</label>
-                        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Email Address:</label>
-                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Message:</label>
-                        <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                    </div>
-                </div>
-                <div id="success"></div>
-                <!-- For success/fail messages -->
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-
     </div>
     <!-- /.row -->
 

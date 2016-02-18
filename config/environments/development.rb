@@ -39,9 +39,9 @@ Rails.application.configure do
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   # Send email in development mode?
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
 
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
@@ -51,8 +51,17 @@ Rails.application.configure do
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
-  config.assets.raise_runtime_errors = true
-
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+ config.action_mailer.perform_deliveries = true
+ config.action_mailer.default :charset => "utf-8"
+  ActionMailer::Base.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :user_name            => "luxrealestatetitle@gmail.com",
+  :password             => 'luxretitle',
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+  }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

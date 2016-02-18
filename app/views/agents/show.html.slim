@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @agent.name
+p
+  strong Company:
+  = @agent.company
+p
+  strong Url:
+  = @agent.url
+p
+  strong Img url:
+  = @agent.img_url
+p
+  strong Click count:
+  = @agent.click_count
+
+= link_to 'Edit', edit_agent_path(@agent)
+'|
+= link_to 'Back', agents_path

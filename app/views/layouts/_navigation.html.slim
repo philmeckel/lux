@@ -1,5 +1,5 @@
 / navigation styled for Bootstrap 3.0
-nav.navbar.navbar-inverse.navbar-fixed-top
+nav.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
       button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
@@ -7,7 +7,10 @@ nav.navbar.navbar-inverse.navbar-fixed-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
+      == render "layouts/brand"
+
     .collapse.navbar-collapse
-      ul.nav.navbar-nav
+      ul.nav.navbar-nav.pull-right
         == render 'layouts/navigation_links'
+      ul.nav.navbar-nav.navbar-inner.navbar-text.pull-top
+        == render 'layouts/navigation_footer'

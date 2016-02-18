@@ -1,0 +1,11 @@
+= simple_form_for(@faq) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :question
+    = f.input :answer
+    = f.input :index
+    = f.input :category
+
+  .form-actions
+    = f.button :submit
