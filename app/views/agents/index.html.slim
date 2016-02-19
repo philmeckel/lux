@@ -1,29 +1,30 @@
-h1 Listing agents
+div.container
+  = render partial: 'layouts/header', locals: {heading: "Featured Agents", subheading: ""}
+  hr
+  = link_to 'New Agent', new_agent_path
 
-table
-  thead
-    tr
-      th Name
-      th Company
-      th Url
-      th Img url
-      th Click count
-      th
-      th
-      th
+  table-responsive
+    table.table-bordered.table-hover.table-condensed
+      thead
+        tr
+          th Image
+          th Name
+          th Company
+          th
 
-  tbody
-    - @agents.each do |agent|
-      tr
-        td = agent.name
-        td = agent.company
-        td = agent.url
-        td = agent.img_url
-        td = agent.click_count
-        td = link_to 'Show', agent
-        td = link_to 'Edit', edit_agent_path(agent)
-        td = link_to 'Destroy', agent, data: {:confirm => 'Are you sure?'}, :method => :delete
+      tbody
+        - @agents.each do |agent|
+          tr
+            td = image_tag agent.img_url, :class => "img-responsive customer-img", :size => '100x100'
+            td = agent.name
+            td = agent.company
+            td
+              = link_to agent
+                span.glyphicon.glyphicon-eye-open
+              = link_to edit_agent_path(agent)
+                span.glyphicon.glyphicon-pencil
+              = link_to agent, data: {:confirm => 'Are you sure?'}, :method => :delete
+                span.glyphicon.glyphicon-trash
 
-br
+    br
 
-= link_to 'New Agent', new_agent_path
