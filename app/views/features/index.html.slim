@@ -1,0 +1,27 @@
+h1 Listing features
+
+table
+  thead
+    tr
+      th Title
+      th Feature text
+      th Icon
+      th Url
+      th
+      th
+      th
+
+  tbody
+    - @features.each do |feature|
+      tr
+        td = feature.title
+        td = feature.feature_text
+        td = feature.icon
+        td = feature.url
+        td = link_to 'Show', feature
+        td = link_to 'Edit', edit_feature_path(feature)
+        td = link_to 'Destroy', feature, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Feature', new_feature_path

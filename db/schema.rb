@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218003237) do
+ActiveRecord::Schema.define(version: 20160221010631) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -24,12 +24,21 @@ ActiveRecord::Schema.define(version: 20160218003237) do
   end
 
   create_table "faqs", force: :cascade do |t|
-    t.string   "question",   limit: 255
-    t.string   "answer",     limit: 255
+    t.text     "question",   limit: 65535
+    t.text     "answer",     limit: 65535
     t.integer  "index",      limit: 4
     t.string   "category",   limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.string   "title",        limit: 255
+    t.text     "feature_text", limit: 65535
+    t.string   "icon",         limit: 255
+    t.string   "url",          limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|

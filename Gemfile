@@ -25,6 +25,10 @@ gem 'mysql2', '~> 0.3.18'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'zip-codes'
+gem 'StreetAddress', :require => "street_address"
+gem 'awesome_print'
+
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

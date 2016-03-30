@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @feature.title
+p
+  strong Feature text:
+  = @feature.feature_text
+p
+  strong Icon:
+  = @feature.icon
+p
+  strong Url:
+  = @feature.url
+
+= link_to 'Edit', edit_feature_path(@feature)
+'|
+= link_to 'Back', features_path

@@ -48,50 +48,19 @@
                 LUX Real Estate Title
             </h1>
         </div>
+        <% Feature.all.each do |feature|  %>
         <div class="col-md-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-home"></i> National Title Company</h4>
+                    <h4><i class="fa fa-fw fa-<%=feature.icon %>"></i> <%=feature.title %></h4>
                 </div>
                 <div class="panel-body">
-                    <p>A nationwide title company, our trained professionals know the requirements, customs and nuances for each state.</p>
+                    <p><%=feature.feature_text%></p>
                     <a href="#" class="btn btn-default">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-key"></i> Lowest Fees</h4>
-                </div>
-                <div class="panel-body">
-                    <p>We value our relationships with our clients first and foremost and therefore charge less for our services than our competitors.</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-check"></i> Fast Turnaround</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Our turnaround time for title is always very fast and we can usually conduct a closing on the same day you notify us to do so.</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-road"></i> Anytime, Anywhere</h4>
-                </div>
-                <div class="panel-body">
-                    <p>We provide 24/7 title service. Our settlement officers and attorneys are always available to conduct mobile settlements anywhere & anytime</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
+        <% end %>
     </div>
     <!-- /.row -->
     <hr>
@@ -150,7 +119,7 @@
             <h2 class="page-header">Nationwide Title Services</h2>
         </div>
         <div class="col-md-6">
-            <p>The Modern Business template by Start Bootstrap includes:</p>
+            <p>LUX Real Estate Title is a leading title company that provides nationwide title services for realtors, lenders, and homeowners. We pride ourselves on providing the best title company services at low rates, with fast turnaround for settlement services, 24/7 service, mobile settlements, Spanish speaking settlements, and online title closings. Armour Title Company offers complete title services for Maryland, Virginia, Pennsylvania, New Jersey, Florida, Tennessee, North Carolina, Georgia, Ohio, Kentucky and nationwide.</p>
             <ul>
                 <li>Title Insurance</li>
                 <li>Closing Services</li>
@@ -158,10 +127,9 @@
                 <li>Contract of Sale Preparation</li>
                 <li>Commercial Closings</li>
             </ul>
-            <p>LUX Real Estate Title is a leading title company that provides nationwide title services for realtors, lenders, and homeowners. We pride ourselves on providing the best title company services at low rates, with fast turnaround for settlement services, 24/7 service, mobile settlements, Spanish speaking settlements, and online title closings. Armour Title Company offers complete title services for Maryland, Virginia, Pennsylvania, New Jersey, Florida, Tennessee, North Carolina, Georgia, Ohio, Kentucky and nationwide.</p>
         </div>
         <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+            <img class="img-responsive" src="http://www.corisa.it/wp-content/uploads/2015/10/stock-footage-document-signature-paper-signature-signing-a-printed-form-signature-on-agreement-to-sign-a.jpg" alt="">
         </div>
     </div>
     <!-- /.row -->
@@ -176,7 +144,8 @@
 <script>
 $(document).on('ready', function () {
   $('.carousel').carousel({
-      interval: 1000 //changes the speed
+      interval: 5000 //changes the speed
   })
 });
 </script>
+
